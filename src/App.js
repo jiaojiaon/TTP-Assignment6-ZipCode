@@ -1,11 +1,11 @@
+import logo from './logo.svg';
 import './App.css';
-import Search from "./Search.js"
+import CitySearch from './CitySearch.js';
 
-function App(){
+function App() {
   return (
-  <div class="zip-conatiner"><Search/></div> 
-  
-);
+   <div class="zip-conatiner"> <CitySearch /> </div>
+  )
 }
 
 export default App;

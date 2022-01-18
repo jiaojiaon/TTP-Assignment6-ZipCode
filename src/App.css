@@ -1,3 +1,19 @@
+h1{
+  margin: 0;
+  padding: 30px;
+  background-color: #1B1B1B;
+  color: white;
+  font-size: 70px;
+  text-align: center;
+}
+.submit-container{
+  text-align: center;
+  font-size: 15px;
+}
+.zip-body{
+  text-align: center;
+}
+
 .App {
   text-align: center;
 }
