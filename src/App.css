@@ -8,11 +8,40 @@ h1{
 }
 .submit-container{
   text-align: center;
-  font-size: 15px;
+  font-size: 20px;
 }
 .zip-body{
-  text-align: center;
+  min-height: 300px;
+  width: 30%;
+  text-align: left;
+  vertical-align: middle;
+  border-radius: 5px;
+  border-top:50px;
+  padding-bottom: auto;
+  margin: 20px auto;
+  float: center;
+
 }
+.top-box {
+  background: #aaa;
+  text-align: left;
+  line-height: 25px;
+  padding: 20px;
+}
+
+ul {
+  margin: 10px 10px;
+  list-style-position: inside;
+  position: relative;
+}
+
+li {
+  margin: 20px 20px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  list-style: circle;
+}
+  
 
 .App {
   text-align: center;

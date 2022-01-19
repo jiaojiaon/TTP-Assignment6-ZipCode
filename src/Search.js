@@ -1,12 +1,11 @@
-import { render } from "@testing-library/react";
 import React from "react"
 
-class CitySearch extends React.Component {
+class Search extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             results: [],
-            cityName: ""
+            zipCode: ""
         }
         this.handleChange = this.handleChange.bind(this)
     }
@@ -14,10 +13,10 @@ class CitySearch extends React.Component {
     handleChange(event){
         event.preventDefault();
         this.setState({
-            cityName:event.target.zip.value
+            zipCode:event.target.zip.value
         })
         
-         fetch('http://ctp-zip-api.herokuapp.com/city/'+event.target.zip.value.toUpperCase())
+         fetch('http://ctp-zip-api.herokuapp.com/zip/'+event.target.zip.value)
              .then(response=>{
                  return response.json();
              })
@@ -39,12 +38,12 @@ class CitySearch extends React.Component {
             <div>
                 <header>
                     <div className ="zip-header">
-                        <h1>City Search</h1>
+                        <h1> Zip Code Search</h1>
 
                         <div className ="submit-container">
                             <form onSubmit={this.handleChange}>
-                                <h2> City Name:</h2>
-                                <input type="Text" placeholder="CityName" name="zip"></input>
+                                <h2> Enter Zip Code:</h2>
+                                <input type="number" placeholder="ZipCode" name="zip"></input>
 
                                 <input type="submit" placeholder="Search"></input>
                             </form>
@@ -55,10 +54,17 @@ class CitySearch extends React.Component {
                 <h2>
                     <div className ="zip-body">
                         {this.state.results.map((data, i) => (
-                
-                                <p key = {i}>
-                                  Zip Code: {data}
-                                </p>
+
+                            <><p className={"top-box"}>
+                                {data.City}, {data.State}
+                            </p>
+                                <ul key={i}>
+                                    <li>State: {data.State}</li>
+                                    <li>Location: ({data.Lat}  {data.Long}) </li>
+                                    <li>Population(estimated): {data.EstimatedPopulation}</li>
+                                    <li>Total Wages: {data.TotalWages}</li>
+                                </ul></>
+                            
         
                     ))}
     
@@ -69,4 +75,4 @@ class CitySearch extends React.Component {
         );
     }
 }
-export default CitySearch;
+export default Search;
