@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/TTP-Assignment6-ZipCode/static/css/main.914b6f4f.css",
+    "main.js": "/TTP-Assignment6-ZipCode/static/js/main.9169cf5c.js",
+    "static/js/787.f417d7de.chunk.js": "/TTP-Assignment6-ZipCode/static/js/787.f417d7de.chunk.js",
+    "index.html": "/TTP-Assignment6-ZipCode/index.html",
+    "main.914b6f4f.css.map": "/TTP-Assignment6-ZipCode/static/css/main.914b6f4f.css.map",
+    "main.9169cf5c.js.map": "/TTP-Assignment6-ZipCode/static/js/main.9169cf5c.js.map",
+    "787.f417d7de.chunk.js.map": "/TTP-Assignment6-ZipCode/static/js/787.f417d7de.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.914b6f4f.css",
+    "static/js/main.9169cf5c.js"
+  ]
+}
